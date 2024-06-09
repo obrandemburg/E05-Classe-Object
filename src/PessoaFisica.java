@@ -19,6 +19,16 @@ public class PessoaFisica extends Cliente{
         }
     }
 
+    @Override
+    public String toString(){
+        String Saida = super.toString() + " CPF: "+ this.cpf + " Sexo: " + this.sexo + " Idade: " + this.idade;
+        return Saida;
+    }
+
+    @Override
+    public boolean equals(Object obj){
+        return this.cpf == ((PessoaFisica)obj).cpf;
+    }
     protected static boolean isCpfValid(String cpf) {
         boolean cpfValido = true;
 

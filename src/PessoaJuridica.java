@@ -12,4 +12,14 @@ public class PessoaJuridica extends Cliente{
         this.Numero_funcionarios = Numero_funcionarios;
         this.setor = setor;
     }
+    @Override
+    public String toString(){
+        String Saida = super.toString() + " CNPJ: " + this.cnpj + " Numero de funcionários: "+ this.Numero_funcionarios +" Setor: "+ this.setor;
+
+        return Saida;
+    }
+    @Override
+    public boolean equals(Object obj){
+        return this.cnpj == ((PessoaJuridica)obj).cnpj;
+    }
 }

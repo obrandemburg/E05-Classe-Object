@@ -42,8 +42,11 @@ public class Operacao {
         Operacao.totalOperacoes++;
     }
 
-    void imprimir() {
-        System.out.printf("%s\t%s\t%s\n", this.data, this.tipo, this.valor);
+    @Override
+    public String toString() {
+
+        String Saida = "Data: "+ this.data + " Tipo: "+ this.tipo + " Valor: "+ this.valor;
+        return Saida;
     }
 
     public Date getData() {

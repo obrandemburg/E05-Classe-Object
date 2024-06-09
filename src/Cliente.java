@@ -14,8 +14,11 @@ public class Cliente {
         this.endereco = endereco;
         this.data = data;
     }
-
-
+@Override
+    public String toString(){
+        String Saida = "Nome cliente: "+ this.nome +" Data criação da conta: "+ this.data + " Endereço cliente: "+ this.endereco;
+        return Saida;
+    }
 
 
     public String getNome() {

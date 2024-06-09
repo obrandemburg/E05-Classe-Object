@@ -67,19 +67,27 @@ public class Conta {
         return false;
     }
 
-    public void imprimir() {
-        System.out.println("===== Conta " + this.numero + " =====");
-        System.out.println("Dono: " + this.dono.nome);
-        System.out.println("Saldo: " + this.saldo);
-        System.out.println("Limite: " + this.limite);
-        System.out.println("====================");
+    @Override
+    public String toString() {
+        String saida = "===== Conta " + this.numero + " =====\n" +
+                "Dono: " + this.dono.nome + "\n" +
+                "Saldo: " + this.saldo + "\n" +
+                "Limite: " + this.limite + "\n" +
+                "====================";
+        return saida;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+
+        return this.numero == ((Conta)obj).numero;
     }
 
     public void imprimirExtrato() {
         System.out.println("======= Extrato Conta " + this.numero + "======");
         for(Operacao atual : this.operacoes) {
             if (atual != null) {
-                atual.imprimir();
+                System.out.println(atual.toString());
             }
         }
         System.out.println("====================");

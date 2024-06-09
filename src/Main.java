@@ -51,6 +51,9 @@ public class Main {
             conta1.depositar(2000);
             conta1.sacar(500);
 
+            System.out.println(conta1.equals(conta2));
+            System.out.println(conta1.equals(conta1));
+
             conta2.transferir(conta1, 666);
             conta2.depositar(234);
 
@@ -69,6 +72,8 @@ public class Main {
             conta3.sacar(120);
             conta3.imprimirExtrato();
         }
+
+
 
     }
 
